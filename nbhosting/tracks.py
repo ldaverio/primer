@@ -16,7 +16,7 @@ def tracks(coursedir):
     # 3 tracks
 
     track_specs = [
-        ('primer' , 'Python primer',
+        ('python' , 'survol langage',
          [ ('primer', 'notebooks/1-[0-9]*.ipynb'),
          ]),
 # temporarily hidden
