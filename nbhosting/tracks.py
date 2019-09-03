@@ -19,7 +19,7 @@ def tracks(coursedir):
         ('python' , 'survol langage',
          [ 
            ('intro', 'notebooks/0-[0-9]*.ipynb'),
-           ('primer', 'notebooks/1-[0-9]*.ipynb'),
+           ('python', 'notebooks/1-[0-9]*.ipynb'),
          ]),
 # temporarily hidden
 #        ('numpy' , 'numpy',
