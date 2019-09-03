@@ -16,11 +16,10 @@ def tracks(coursedir):
     # 3 tracks
 
     track_specs = [
-        ('intro' , 'introduction',
-         [ ('intro', 'notebooks/0-[0-9]*.ipynb'),
-         ]),
         ('python' , 'survol langage',
-         [ ('primer', 'notebooks/1-[0-9]*.ipynb'),
+         [ 
+           ('intro', 'notebooks/0-[0-9]*.ipynb'),
+           ('primer', 'notebooks/1-[0-9]*.ipynb'),
          ]),
 # temporarily hidden
 #        ('numpy' , 'numpy',
