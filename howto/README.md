@@ -1,82 +1,142 @@
-# notebooks
+Sommaire
+=================
 
-Le cours est exclusivement écrit en notebooks sous forme de slides. 
+   * [les contenus du cours](#les-contenus-du-cours)
+      * [notebooks](#notebooks)
+      * [support de cours au format html](#support-de-cours-au-format-html)
+      * [les sources des cours](#les-sources-des-cours)
+   * [utilisation des notebooks](#utilisation-des-notebooks)
+      * [nbhosting](#nbhosting)
+      * [installation locale](#installation-locale)
+         * [prérequis](#prérequis)
+         * [télécharger le cours](#télécharger-le-cours)
+         * [installations additionnelles](#installations-additionnelles)
+         * [lancement](#lancement)
+      * [visionneuse de slides](#visionneuse-de-slides)
+   * [mise à jour du cours](#mise-à-jour-du-cours)
+      * [nbhosting](#nbhosting-1)
+      * [installation locale](#installation-locale-1)
+   * [divers](#divers)
+      * [format html <em>offline</em>](#format-html-offline)
 
-Remarquez également la présence de notes qui approfondissent les slides; ces notes n'apparaissent pas à l'écran dans la vue 'slide' standard, on les voit apparaitre dans dans la sortie html, ainsi que dans la vue orateur (voir 'visionneuse').
+# les contenus du cours
 
-Pour utiliser les notebooks, deux options :
+## notebooks
 
-* installation Jupyter locale
-* utilisation à distance sur nbhosting
+Le cours est exclusivement écrit sous forme de notebooks Jupyter.  
+Ainsi le professeur peut **exécuter le code** dans les slides
+au fur et à mesure des explications.  
 
-Dans l'esprit de la prise d'autonomie, c'est la première option qui est recommandée à terme.
+Les étudiants peuvent expérimenter de la même façon de leur coté, 
+en modifiant le code si nécessaire. Pour cela deux options sont disponibles :
 
-Toutefois la plateforme nbhosting est disponible en guise de secours, notamment au début du cours, pour permettre de suivre les cours sans installation locale préalable.
+* plateforme hébergée *nbhosting*  
+  tous les étudiants ont un compte sur `nbhosting.inria.fr`; à partir de là vous avez
+  accès aux cours interactifs dans votre navigateur **sans aucune installation**
+  sur votre ordinateur. C'est la méthode préconisée pour les tous premiers cours, 
+  pour ne pas dépendre des aléas d'une installation locale.
 
-Notez également la présence d'une version statique en html, voir la dernière section. 
+* installation locale  
+  toutefois, dans l'esprit de la prise d'autonomie, à terme les étudiants devront être
+  capables d'installer localement sur leur ordinateur personnel la pile git et Jupyter
+  nécessaire pour pouvoir jouer les cours localement
 
-# installation locale
+Nous donnons plus loin les modalités de mise en oeuvre et d'utilisation de ces deux
+options.
 
-Par rapport à une installation Python standard, plusieurs niveaux de dépendances doivent être envisagés
+## support de cours au format html
 
-## dépendances dures
+Le contenu des cours est également disponible au format `html`. Par exemple le cours 
+dit 'Python primer' d'introduction à Python - numpy - pandas est disponible sur
+https://flotpython-primer.readthedocs.io. Il s'agit d'un contenu statique et non 
+interactif; le code a été exécuté lors de la génération, il n'est ni modifiable 
+ni exécutable.  
 
-A minima, pour exécuter les notebooks de ce cours vous devez installer quelques bibliothèques; pour cela la méthode la plus simple consiste à faire 
+Ce format peut s'avérer utile pour les révisions, il contient une table des matières, et
+il est possible de rechercher un terme.
+
+Notez également la présence de notes qui approfondissent les slides; ces notes
+n'apparaissent pas à l'écran lorsque les notebooks sont projetés sous forme de
+diapositives, mais elles apparaissent dans la sortie html.
+
+## les sources des cours
+
+Les contenus, les notebooks donc, sont accessibles sous forme d'un dépôt git. Pas
+de panique si vous ne connaissez pas, c'est l'objet d'un des tous premiers cours. 
+
+L'idée est de permettre à tous de télécharger la dernière version, et de rester à jour
+lors de mises à jour. Notamment, les contenus peuvent être diffusés au fur et à mesure -
+par exemple une semaine à la fois - il faut alors se mettre à jour au fur et à mesure.
+
+
+# utilisation des notebooks
+
+
+## nbhosting
+
+Seuls les cours dont le nom commence par `mines-` sont à destination de l'École des Mines, veuillez ignorer les autres cours.
+
+**Attention** il faut s'attendre à un délai assez long la première fois qu'on se connecte
+sur un cours, ou après une période d'inactivité, le temps de réallouer les ressources pour
+la session.
+
+![](nbhosting.png)
+
+## installation locale
+
+### prérequis
+
+Il vous faut avoir installé au préalable Python et git.
+
+Pour ceux qui installent ces outils pour la première fois, on recommande :
+
+* en ce qui concerne Python, la distribution *anaconda* <https://www.anaconda.com/distribution>
+* en ce qui concerne git :
+  * sur Windows, <https://gitforwindows.org> qui vient avec un terminal compatible *bash*
+  * sur MacOS, peu importe en fait la méthode utilisée
+  * sur Linux, utilisez le package manager (dnf, apt-get)
+
+* en option, sur Windows et MacOS, l'installation de SourceTree
+  <https://www.sourcetreeapp.com/>, comme interface graphique pour git, peut s'avérer
+  pratique.
+
+### télécharger le cours
+
+Il vous faut bien sûr télécharger le cours; pour cela tapez dans un terminal
+
+```bash
+git clone https://github.com/flotpython/primer 
+
+# ce qui va créer un répertoire 'primer'
+# dans lequel on va aller pour la suite
+cd primer
+```
+
+### installations additionnelles
+
+Pour ajouter les composants additionnels dont le cours a besoin en plus de Python et git, 
+tapez dans un terminal (dans le même répertoire `primer` créé ci-dessus)
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## confort
 
-Dans les slides on utilise fréquemment une extension jupyter qui s'appelle `splitcell`; elle permet d'avoir des cellules qui prennent une demie largeur, pour mieux utliser l'espace sur les slides, pour l'activer :
+### lancement
 
-```bash
-jupyter nbextension enable splitcell/splitcell
-```
-
-Noter que si vous avez un système de virtualenv ou d'environnement conda, il peut être utile d'ajouter cette option, afin de n'activer cette extension **que** dans votre virtualenv.
+Toujours dans le répertoire `primer`, vous lancez les notebooks en tapant
 
 ```bash
-jupyter nbextension enable splitcell/splitcell --sys-prefix
+jupyter notebook
 ```
+Ouvrez le répertoire `notebooks`, cliquez sur un notebook,
+ce sont les fichiers dont le nom est en `.ipynb` (pour IPython notebook).
 
-Enfin la visionneuse peut être upgradée à la version 5.6, actuellement en  développement mais plus confortable:
+## visionneuse de slides
 
-```bash
-pip install -U --pre rise
-```
-
-# nbhosting
-
-Les images docker préparées pour exécuter le cours sous nbhosting contiennent tout ce qui est nécessaire.
-
-Par contre il faut s'attendre à un délai assez long la première fois qu'on se connecte sur un cours, ou après une période d'inactivité, le temps de recréer un container.
-
-Il existe aussi quelques fonctionnalités spécifiques à nbhosting :
-
-* pour passer en mode plein écran, utiliser les petites icônes en forme de `<` et de `^` dans les coins supérieurs gauche et droit respectivement de l'iframe jupyter; avec n'importe quel modifier comme `Shift` ou `Control` ces icônes changent une seule direction. 
-
-* dans le menu Jupyter `File` il y a deux ajouts qui sont
-  * *Reset to Original* : permet de revenir à la version 'prof' du notebook courant
-  * *Share Static Version* : pour exposer en read-only un notebook via une URL, par exemple pour une discussion dans un forum
-
-* **git** : pour chaque étudiant qui ouvre un cours pour la première fois, on va cloner au sens git le repo du prof; si par exemple lors d'une 2ème ou 3ème session, du contenu a été ajouté depuis le début du cours, il est donc nécessaire pour l'étudiant de **tirer** dans ce repo git.
-
-  Pour cela actuellement il est nécessaire de passer par jupyterlab (en bas à gauche dans la vue nbhosting, sortie du mode plein écran). Deux options :
-
-  * jupyterlab est buildé avec l'extension 'jupyterlab-git` qui permet de tirer, voir les changements, les abandonner si nécessaire..
-  
-    ![](nbhosting-git-pull.png)
-
-  * en ligne de commande, pour cela créer un terminal sous jupyter et aller dans `work`
-
-    ![](git-terminal.png)]
-
-  
-# visionneuse de slides
-
-Les notebooks comportant des slides démarrent en principe automatiquement en mode slide; pour aller/revenir vers le mode notebook *classic* :
+Quel que soit le mode hébergé ou local, les notebooks comportant des slides démarrent en
+principe automatiquement en mode slide; pour aller/revenir vers le mode notebook
+*classic* :
 
 * avec le clavier, utiliser 'Alt-r'  (Option-r sur MacOS)
 * avec la souris
@@ -103,10 +163,51 @@ Et aussi :
 
 ![le mode overview](slides-notes.png)
 
-# version html
 
-En guise de *handouts* le contenu de ce cours est disponible en html 'statique'
 
-https://flotpython-primer.readthedocs.io/
+# mise à jour du cours
 
- évidemment cette forme vient avec toutes les cellules exécutées (à l'inverse du repo git où on ne range que des notebooks vierges, utiliser `nbstripout` pour le nettoyage)
+Les semaines suivantes, vous pouvez être amenés à mettre à jour votre dépôt git, 
+typiquement pour aller chercher du nouveau contenu.
+
+Ceci s'applique pour les deux options (nbhosting et local); 
+en effet en interne `nbhosting` crée lui aussi un dépôt git pour chaque étudiant.
+
+
+## nbhosting
+
+Pour cela actuellement il est nécessaire de passer par jupyterlab (en bas à gauche dans la
+vue nbhosting, sortie du mode plein écran). Deux options :
+
+* jupyterlab est buildé avec l'extension `jupyterlab-git` qui permet de tirer, voir les
+  changements, les abandonner si nécessaire..
+
+  ![](nbhosting-git-pull.png)
+
+* en ligne de commande, pour cela créer un terminal sous jupyter et aller dans `work`
+
+  ![](git-terminal.png)]
+
+
+## installation locale
+
+Pour mettre à jour votre copie locale du cours, il vous suffit de faire dans un terminal :
+
+```bash
+
+# retournez dans le répertoire qui contient le cours
+cd primer
+
+# pour tirer les nouveautés
+git pull
+```
+
+
+# divers
+
+## format html *offline*
+
+Si vous voulez lire les supports de cours 'hors ligne', téléchargez une version statique, 
+par exemple toujours pour le cours 'Python primer':
+
+https://readthedocs.org/projects/flotpython-primer/downloads/htmlzip/latest/
