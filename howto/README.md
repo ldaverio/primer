@@ -23,20 +23,20 @@ Sommaire
 
 ## notebooks
 
-Le cours est exclusivement écrit sous forme de notebooks Jupyter.  
+Le cours est exclusivement écrit sous forme de notebooks Jupyter.
 Ainsi le professeur peut **exécuter le code** dans les slides
-au fur et à mesure des explications.  
+au fur et à mesure des explications.
 
-Les étudiants peuvent expérimenter de la même façon de leur coté, 
+Les étudiants peuvent expérimenter de la même façon de leur coté,
 en modifiant le code si nécessaire. Pour cela deux options sont disponibles :
 
-* plateforme hébergée *nbhosting*  
+* plateforme hébergée *nbhosting*
   tous les étudiants ont un compte sur `nbhosting.inria.fr`; à partir de là vous avez
   accès aux cours interactifs dans votre navigateur **sans aucune installation**
-  sur votre ordinateur. C'est la méthode préconisée pour les tous premiers cours, 
+  sur votre ordinateur. C'est la méthode préconisée pour les tous premiers cours,
   pour ne pas dépendre des aléas d'une installation locale.
 
-* installation locale  
+* installation locale
   toutefois, dans l'esprit de la prise d'autonomie, à terme les étudiants devront être
   capables d'installer localement sur leur ordinateur personnel la pile git et Jupyter
   nécessaire pour pouvoir jouer les cours localement
@@ -46,11 +46,11 @@ options.
 
 ## support de cours au format html
 
-Le contenu des cours est également disponible au format `html`. Par exemple le cours 
+Le contenu des cours est également disponible au format `html`. Par exemple le cours
 dit 'Python primer' d'introduction à Python - numpy - pandas est disponible sur
-https://flotpython-primer.readthedocs.io. Il s'agit d'un contenu statique et non 
-interactif; le code a été exécuté lors de la génération, il n'est ni modifiable 
-ni exécutable.  
+https://flotpython-primer.readthedocs.io. Il s'agit d'un contenu statique et non
+interactif; le code a été exécuté lors de la génération, il n'est ni modifiable
+ni exécutable.
 
 Ce format peut s'avérer utile pour les révisions, il contient une table des matières, et
 il est possible de rechercher un terme.
@@ -62,7 +62,7 @@ diapositives, mais elles apparaissent dans la sortie html.
 ## les sources des cours
 
 Les contenus, les notebooks donc, sont accessibles sous forme d'un dépôt git. Pas
-de panique si vous ne connaissez pas, c'est l'objet d'un des tous premiers cours. 
+de panique si vous ne connaissez pas, c'est l'objet d'un des tous premiers cours.
 
 L'idée est de permettre à tous de télécharger la dernière version, et de rester à jour
 lors de mises à jour. Notamment, les contenus peuvent être diffusés au fur et à mesure -
@@ -105,7 +105,7 @@ Pour ceux qui installent ces outils pour la première fois, on recommande :
 Il vous faut bien sûr télécharger le cours; pour cela tapez dans un terminal
 
 ```bash
-git clone https://github.com/flotpython/primer 
+git clone https://github.com/flotpython/primer
 
 # ce qui va créer un répertoire 'primer'
 # dans lequel on va aller pour la suite
@@ -114,13 +114,23 @@ cd primer
 
 ### installations additionnelles
 
-Pour ajouter les composants additionnels dont le cours a besoin en plus de Python et git, 
+Pour ajouter les composants additionnels dont le cours a besoin en plus de Python et git,
 tapez dans un terminal (dans le même répertoire `primer` créé ci-dessus)
 
 ```bash
 pip install -r requirements.txt
 ```
 
+
+### confort
+
+**En option :** dans les slides on utilise fréquemment des extensions Jupyter, et notamment une qui s'appelle `splitcell`; elle permet d'avoir des cellules qui prennent une demie largeur, pour mieux utiliser l'espace sur les slides ;
+ce n'est pas totalement indispensable donc, mais pour l'activer :
+
+```bash
+jupyter contrib nbextension install
+jupyter nbextension enable splitcell/splitcell
+```
 
 ### lancement
 
@@ -141,7 +151,7 @@ principe automatiquement en mode slide; pour aller/revenir vers le mode notebook
 * avec le clavier, utiliser 'Alt-r'  (Option-r sur MacOS)
 * avec la souris
   * pour quitter le mode slide, la grosse croix en haut à gauche
-  * pour entrer dans le mode slide, l'icône en forme de barchart 
+  * pour entrer dans le mode slide, l'icône en forme de barchart
 
 ![](slide-to-classic.png)
 ![](classic-to-slide.png)
@@ -167,10 +177,10 @@ Et aussi :
 
 # mise à jour du cours
 
-Les semaines suivantes, vous pouvez être amenés à mettre à jour votre dépôt git, 
+Les semaines suivantes, vous pouvez être amenés à mettre à jour votre dépôt git,
 typiquement pour aller chercher du nouveau contenu.
 
-Ceci s'applique pour les deux options (nbhosting et local); 
+Ceci s'applique pour les deux options (nbhosting et local);
 en effet en interne `nbhosting` crée lui aussi un dépôt git pour chaque étudiant.
 
 
@@ -207,7 +217,7 @@ git pull
 
 ## format html *offline*
 
-Si vous voulez lire les supports de cours 'hors ligne', téléchargez une version statique, 
+Si vous voulez lire les supports de cours 'hors ligne', téléchargez une version statique,
 par exemple toujours pour le cours 'Python primer':
 
 https://readthedocs.org/projects/flotpython-primer/downloads/htmlzip/latest/

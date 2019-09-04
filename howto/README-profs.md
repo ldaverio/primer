@@ -1,6 +1,6 @@
 # notebooks
 
-Le cours est exclusivement écrit en notebooks sous forme de slides. 
+Le cours est exclusivement écrit en notebooks sous forme de slides.
 
 Remarquez également la présence de notes qui approfondissent les slides; ces notes n'apparaissent pas à l'écran dans la vue 'slide' standard, on les voit apparaitre dans dans la sortie html, ainsi que dans la vue orateur (voir 'visionneuse').
 
@@ -13,7 +13,7 @@ Dans l'esprit de la prise d'autonomie, c'est la première option qui est recomma
 
 Toutefois la plateforme nbhosting est disponible en guise de secours, notamment au début du cours, pour permettre de suivre les cours sans installation locale préalable.
 
-Notez également la présence d'une version statique en html, voir la dernière section. 
+Notez également la présence d'une version statique en html, voir la dernière section.
 
 # installation locale
 
@@ -21,7 +21,7 @@ Par rapport à une installation Python standard, plusieurs niveaux de dépendanc
 
 ## dépendances dures
 
-A minima, pour exécuter les notebooks de ce cours vous devez installer quelques bibliothèques; pour cela la méthode la plus simple consiste à faire 
+A minima, pour exécuter les notebooks de ce cours vous devez installer quelques bibliothèques; pour cela la méthode la plus simple consiste à faire
 
 ```bash
 pip install -r requirements.txt
@@ -29,15 +29,17 @@ pip install -r requirements.txt
 
 ## confort
 
-Dans les slides on utilise fréquemment une extension jupyter qui s'appelle `splitcell`; elle permet d'avoir des cellules qui prennent une demie largeur, pour mieux utliser l'espace sur les slides, pour l'activer :
+Dans les slides on utilise fréquemment des extensions Jupyter, et notamment une qui s'appelle `splitcell`; elle permet d'avoir des cellules qui prennent une demie largeur, pour mieux utiliser l'espace sur les slides, pour l'activer :
 
 ```bash
+jupyter contrib nbextension install
 jupyter nbextension enable splitcell/splitcell
 ```
 
-Noter que si vous avez un système de virtualenv ou d'environnement conda, il peut être utile d'ajouter cette option, afin de n'activer cette extension **que** dans votre virtualenv.
+Notez que si vous avez un système de virtualenv ou d'environnement conda, il peut être utile d'ajouter l'option `--sys-prefix`, afin de n'activer cette extension **que** dans votre virtualenv.
 
 ```bash
+jupyter contrib nbextension install --sys-prefix
 jupyter nbextension enable splitcell/splitcell --sys-prefix
 ```
 
@@ -55,7 +57,7 @@ Par contre il faut s'attendre à un délai assez long la première fois qu'on se
 
 Il existe aussi quelques fonctionnalités spécifiques à nbhosting :
 
-* pour passer en mode plein écran, utiliser les petites icônes en forme de `<` et de `^` dans les coins supérieurs gauche et droit respectivement de l'iframe jupyter; avec n'importe quel modifier comme `Shift` ou `Control` ces icônes changent une seule direction. 
+* pour passer en mode plein écran, utiliser les petites icônes en forme de `<` et de `^` dans les coins supérieurs gauche et droit respectivement de l'iframe jupyter; avec n'importe quel modifier comme `Shift` ou `Control` ces icônes changent une seule direction.
 
 * dans le menu Jupyter `File` il y a deux ajouts qui sont
   * *Reset to Original* : permet de revenir à la version 'prof' du notebook courant
@@ -66,14 +68,14 @@ Il existe aussi quelques fonctionnalités spécifiques à nbhosting :
   Pour cela actuellement il est nécessaire de passer par jupyterlab (en bas à gauche dans la vue nbhosting, sortie du mode plein écran). Deux options :
 
   * jupyterlab est buildé avec l'extension `jupyterlab-git` qui permet de tirer, voir les changements, les abandonner si nécessaire..
-  
+
     ![](nbhosting-git-pull.png)
 
   * en ligne de commande, pour cela créer un terminal sous jupyter et aller dans `work`
 
     ![](git-terminal.png)]
 
-  
+
 # visionneuse de slides
 
 Les notebooks comportant des slides démarrent en principe automatiquement en mode slide; pour aller/revenir vers le mode notebook *classic* :
@@ -81,7 +83,7 @@ Les notebooks comportant des slides démarrent en principe automatiquement en mo
 * avec le clavier, utiliser 'Alt-r'  (Option-r sur MacOS)
 * avec la souris
   * pour quitter le mode slide, la grosse croix en haut à gauche
-  * pour entrer dans le mode slide, l'icône en forme de barchart 
+  * pour entrer dans le mode slide, l'icône en forme de barchart
 
 ![](slide-to-classic.png)
 ![](classic-to-slide.png)
