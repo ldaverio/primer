@@ -13,7 +13,7 @@ seaborn
 
 # jupyter extensions
 #
-rise
+rise>=5.6.0.dev5
 jupyter-contrib-nbextensions
 
 # this part is more for authors
