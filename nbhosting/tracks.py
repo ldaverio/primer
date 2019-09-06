@@ -22,9 +22,9 @@ def tracks(coursedir):
            ('python', 'notebooks/1-[0-9]*.ipynb'),
          ]),
 # temporarily hidden
-#        ('numpy' , 'numpy',
-#         [ ('numpy', 'notebooks/2-[0-9]*.ipynb'),
-#         ]),
+        ('numpy' , 'numpy',
+         [ ('numpy', 'notebooks/2-[0-9]*.ipynb'),
+        ]),
 #        ('dataviz & pandas' , 'dataviz & pandas',
 #         [ ('dataviz & pandas', 'notebooks/3-[0-9]*.ipynb'),
 #         ]),
