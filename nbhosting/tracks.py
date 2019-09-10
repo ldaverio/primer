@@ -23,7 +23,8 @@ def tracks(coursedir):
          ]),
 # temporarily hidden
         ('numpy' , 'numpy',
-         [ ('numpy', 'notebooks/2-[0-9]*.ipynb'),
+#         [ ('numpy', 'notebooks/2-[0-9]*.ipynb'),
+         [ ('numpy', 'notebooks/2-0*.ipynb'), # dropping 2-10 on structured arrays
         ]),
 #        ('dataviz & pandas' , 'dataviz & pandas',
 #         [ ('dataviz & pandas', 'notebooks/3-[0-9]*.ipynb'),
