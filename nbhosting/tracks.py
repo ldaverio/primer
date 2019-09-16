@@ -21,14 +21,14 @@ def tracks(coursedir):
            ('intro', 'notebooks/0-[0-9]*.ipynb'),
            ('python', 'notebooks/1-[0-9]*.ipynb'),
          ]),
-# temporarily hidden
         ('numpy' , 'numpy',
+# dropping 2-10 on structured arrays
 #         [ ('numpy', 'notebooks/2-[0-9]*.ipynb'),
-         [ ('numpy', 'notebooks/2-0*.ipynb'), # dropping 2-10 on structured arrays
+         [ ('numpy', 'notebooks/2-0*.ipynb'), 
         ]),
-#        ('dataviz & pandas' , 'dataviz & pandas',
-#         [ ('dataviz & pandas', 'notebooks/3-[0-9]*.ipynb'),
-#         ]),
+        ('dataviz & pandas' , 'dataviz & pandas',
+         [ ('dataviz & pandas', 'notebooks/3-[0-9]*.ipynb'),
+         ]),
         ]
 
     return [Track(coursedir, 
