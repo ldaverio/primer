@@ -30,17 +30,17 @@ Index
    2-09-numpy-linalg
    2-10-numpy-structured
    3-01-dataviz
-   3-02-pandas-into-series
+   3-02-pandas-intro-series
    3-03-pandas-dataframe
-   3-04-pandas-alignments
-   3-05-pandas-missing-data
-   3-06-pandas-statistics
-   3-07-pandas-indexing
-   3-08-pandas-importing
-   3-09-pandas-groupby
-   3-10-pandas-combining
+   3-04-pandas-importing
+   3-05-pandas-statistics
+   3-06-pandas-missing-data
+   3-07-pandas-timed-data
+   3-08-pandas-alignments
+   3-09-pandas-combining
+   3-10-pandas-groupby
    3-11-pandas-pivoting
-   3-12-pandas-timed-data
+   3-12-pandas-multi-indexing
 
 Licence CC BY-NC-ND - Thierry Parmentelat - Inria 
 
