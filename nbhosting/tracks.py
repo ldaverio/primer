@@ -13,8 +13,6 @@ def tracks(coursedir):
     result is a list of Track instances
     """
 
-    # 3 tracks
-
     track_specs = [
         ('python' , 'survol langage',
          [ 
@@ -29,6 +27,9 @@ def tracks(coursedir):
         ('dataviz & pandas' , 'dataviz & pandas',
          [ ('dataviz & pandas', 'notebooks/3-[0-9]*.ipynb'),
          ]),
+        ('évaluation', 'évaluation',
+         [ ('évaluation', 'notebooks/4-[0-9]*.ipynb'),
+         ])
         ]
 
     return [Track(coursedir, 
